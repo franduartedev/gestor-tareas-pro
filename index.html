@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas Pro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Gestor de Tareas Pro</h1>
+
+      <form id="task-form">
+        <p id="error-message"></p>
+
+        <input type="text" id="task-title" placeholder="Ingrese una tarea" />
+
+        <select id="task-priority">
+          <option value="">Seleccione prioridad</option>
+          <option value="baja">Baja</option>
+          <option value="media">Media</option>
+          <option value="alta">Alta</option>
+        </select>
+
+        <button type="submit">Agregar tarea</button>
+      </form>
+
+      <section class="summary">
+        <p id="pending-count">Tareas pendientes: 0</p>
+      </section>
+
+      <section class="filters">
+        <button type="button" data-filter="todas">Todas</button>
+        <button type="button" data-filter="pendientes">Pendientes</button>
+        <button type="button" data-filter="completadas">Completadas</button>
+      </section>
+
+      <section id="tasks-list"></section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
